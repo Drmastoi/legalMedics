@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const footerLinks = {
   company: [
@@ -22,15 +23,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-                LM
-              </div>
-              <div>
-                <p className="font-semibold">Legal Medics UK</p>
-                <p className="text-xs text-background/70">Medical Legal Training</p>
-              </div>
-            </div>
+            <img src={logo} alt="Legal Medics UK" className="h-16 w-auto rounded" />
             <p className="text-sm text-background/70">
               Leading provider of MEDCO-compliant RTA report training for medical professionals across the UK.
             </p>
