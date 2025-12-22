@@ -23,7 +23,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <img src={logo} alt="Legal Medics UK" className="h-16 w-auto rounded" />
+            <img src={logo} alt="Legal Medics UK" width={88} height={64} className="h-16 w-auto rounded" loading="lazy" />
             <p className="text-sm text-background/70">
               Leading provider of MEDCO-compliant RTA report training for medical professionals across the UK.
             </p>
