@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -20,14 +21,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-            LM
-          </div>
-          <div className="hidden sm:block">
-            <p className="font-semibold text-foreground">Legal Medics UK</p>
-            <p className="text-xs text-muted-foreground">Medical Legal Training</p>
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="Legal Medics UK" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
