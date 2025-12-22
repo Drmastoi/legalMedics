@@ -6,13 +6,16 @@ import heroBg from "@/assets/hero-bg.jpg";
 export function HeroSection() {
   return (
     <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
-      </div>
+      {/* Preload LCP image for performance */}
+      <img 
+        src={heroBg} 
+        alt="" 
+        fetchPriority="high"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        aria-hidden="true"
+      />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
       
       <div className="container relative z-10 py-20">
         <div className="max-w-2xl">
