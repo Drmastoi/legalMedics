@@ -11,19 +11,19 @@ export function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
       </div>
       
       <div className="container relative z-10 py-20">
-        <div className="max-w-3xl">
-          {/* Glass Card */}
-          <div className="backdrop-blur-md bg-card/30 border border-border/20 rounded-lg p-8 md:p-12 shadow-2xl">
+        <div className="max-w-2xl">
+          {/* Bright Glass Card */}
+          <div className="backdrop-blur-xl bg-card/60 border border-card/40 rounded-2xl p-8 md:p-12 shadow-xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-6">
               <CheckCircle className="h-4 w-4" />
               MEDCO Accredited Training
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-card-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-foreground">
               Become a Certified
               <span className="text-primary block">Medical Legal Expert</span>
             </h1>
@@ -40,7 +40,7 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-card/50 hover:bg-card/70" asChild>
+              <Button size="lg" variant="outline" asChild>
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
